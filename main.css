@@ -35,6 +35,22 @@ a {
 
 
 /*
+  Lesson 4 Media queries
+*/
+
+@media screen and (max-width: 530) {
+
+}
+
+@media screen and (min-width: 700px) {
+  main {
+    width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+/*
  *
  * Common
  *
@@ -130,8 +146,7 @@ a {
 main {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
+
 }
 
 /*
