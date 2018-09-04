@@ -2,9 +2,21 @@
   @Task 2: Set width to be responsive at 100% for each component
   @Task 3: Touch targets easy to hit at 48px or 1.5em
 */
+@media screen and (max-width: 525px) {
+  .header__title {
+    font-size: 2em;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    max-width: 800px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
 
 body, html {
-  margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
@@ -38,17 +50,8 @@ a {
   Lesson 4 Media queries
 */
 
-@media screen and (max-width: 530) {
 
-}
 
-@media screen and (min-width: 700px) {
-  main {
-    width: 800px;
-    margin-right: auto;
-    margin-left: auto;
-  }
-}
 
 /*
  *
@@ -97,7 +100,11 @@ a {
   color: #212121;
 }
 
-
+@media screen and (max-width: 525px) {
+  .header__title {
+    font-size: 2.5em;
+  }
+}
 /*
  *
  * Top Level Navigation
