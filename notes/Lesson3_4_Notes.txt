@@ -1,0 +1,81 @@
+Lesson 3: Building Up
+
+	Designing Page Layouts to be Responsive
+	Design pattern is more art then science
+	
+	Media Queries: Different style for sifferent devices
+		wider then n pixels
+			@media screen and (min-width:500px){
+				...changes
+			}
+		
+		smaller then n pixels
+			@media screen and (max-width: 500px) {
+				...changes
+`			}
+		Define breakpoints based on content not devices
+			Find dont choose breakpoints
+		
+			1. Start Small
+			2. Watch for too much space as it grows
+			3. Adjust fonts for size changes
+	
+Lesson 4: Common Responsive Patterns	
+
+	Design Patterns
+		Grid Fluid System
+			columns wrap to next line as browser width gets smaller
+			bootstrap or 960 grid layout system
+			html5rocks.com
+		Flexbox
+			Ability to fill space available (elements can grow or shrink)
+			display: flex;
+				default flex direction is row
+			flex-wrap: wrap 
+				lets elements wrap to next line
+			css order atribute to change order of elements
+				order: #
+				default order value is 0
+				-1 is first
+				anything > 0 is last
+				
+
+		Column Drop
+		Mostly Fluid
+		Layout Shifter
+			Most responsive
+			multiple breakpoints
+			content moves relay on order
+			needs more planning
+		Off Canvas
+			less frequently used content is placed off screen unless 
+				screen is large enough
+			uses hamburger menu
+
+			nav id="drawer" //off canvas nav
+				width: 300px;
+				height: 100%
+				position: absolute;
+				transform: translate(-300px, 0); //moves nav off screen
+				transition: transform 0.3s ease; //transition as it is brought in
+			nav.open { 
+				transform: translate(0, 0) } // opens navbar by resetting transform
+
+			menu.addEventListener( 'click', function(e) {
+				drawer.classList.toggle('open');
+				e.stopPropagation();
+			});
+
+
+			other way:
+				nav { 
+					width: 300px;
+					height: 100%;
+					--webkit-transform: translate(-300px, 0);
+					transform: translate(-300px, 0);
+					transition: transform 0.3s ease;
+				}
+
+				nav.open {
+					--webkit-transform: translate(0,0);
+					transform: translate(0, 0)
